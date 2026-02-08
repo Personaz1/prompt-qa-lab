@@ -28,7 +28,7 @@ def run(input_file, out_file):
     passed = sum(1 for r in results if r["passed"])
     total = len(results)
     report = {
-        "generated_at": datetime.datetime.utcnow().isoformat() + "Z",
+        "generated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "total": total,
         "passed": passed,
         "failed": total - passed,
