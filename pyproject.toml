@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompt-qa-lab"
+version = "0.3.0"
+description = "Prompt and agent regression QA toolkit"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[project.scripts]
+pqalab = "prompt_qalab.cli:main"
