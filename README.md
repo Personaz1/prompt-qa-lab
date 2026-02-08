@@ -13,7 +13,7 @@ Prompt changes break quality silently. This project makes quality drift visible.
 
 ## Planned MVP
 - YAML/JSON test case format
-- CLI: \
+- CLI: `pqalab run`
 - Diff report (pass/fail + changes)
 - Offline/mock mode (no paid API required)
 
