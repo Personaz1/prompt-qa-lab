@@ -25,3 +25,9 @@ Prompt changes break quality silently. This project makes quality drift visible.
 ## Status
 Scaffold released. Contributions welcome.
 
+
+
+## Working scaffold CLI
+```bash
+python3 src/pqalab.py run --input examples/cases.json --out report.json
+```

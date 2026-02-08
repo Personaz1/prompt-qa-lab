@@ -1,0 +1,13 @@
+{
+  "cases": [
+    {
+      "id": "format-check-1",
+      "prompt": "Return a concise launch checklist",
+      "mock_output": "Checklist: scope, owner, deadline",
+      "checks": {
+        "must_contain": ["Checklist", "owner"],
+        "must_not_contain": ["<script>"]
+      }
+    }
+  ]
+}
