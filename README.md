@@ -1,59 +1,56 @@
-# Prompt QA Lab
+# prompt-qa-lab
 
-Prompt QA Lab is a lightweight toolkit for prompt/agent regression testing.
+[![CI](https://img.shields.io/github/actions/workflow/status/Personaz1/prompt-qa-lab/tests.yml?branch=master)](https://github.com/Personaz1/prompt-qa-lab/actions)
+[![Release](https://img.shields.io/github/v/release/Personaz1/prompt-qa-lab)](https://github.com/Personaz1/prompt-qa-lab/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
-## Why
-Prompt changes break quality silently. This project makes quality drift visible.
+## Summary
 
-## Core idea
-- Store prompt test cases as versioned fixtures
-- Run deterministic checks (structure/constraints)
-- Compare outputs across versions
-- Generate a scorecard and diff report
+Prompt QA Lab is a production-oriented scaffold for prompt/agent regression testing.
 
-## Planned MVP
-- YAML/JSON test case format
-- CLI: `pqalab run`
-- Diff report (pass/fail + changes)
-- Offline/mock mode (no paid API required)
+## Features
 
-## Who this is for
-- AI builders shipping prompts weekly
-- solo founders using agent workflows
-- teams needing reproducible prompt QA
-
-## Status
-Scaffold released. Contributions welcome.
-
-
-
-## Working scaffold CLI
-```bash
-python3 src/pqalab.py run --input examples/cases.json --out report.json
-```
-
-
-## Diff mode (regression gate)
-```bash
-python3 src/pqalab.py diff --old report-old.json --new report-new.json --fail-on-regression
-```
-Use exit code in CI to fail builds on quality regressions.
-
+- Installable CLI: `pqalab`
+- Run and diff workflows (`run`, `diff`)
+- Automated tests + CI
+- End-to-end demo artifacts
 
 ## Install
+
 ```bash
 pip install -e .
-pqalab run --input examples/cases.json --out report.json
 ```
 
-## Tests
+## Test
+
 ```bash
-python3 -m pytest -q
+pytest -q
 ```
 
+## Demo
 
-## End-to-end demo
 ```bash
 bash demo/run_demo.sh
 ```
-See generated artifacts in `demo/`.
+
+## AI Evaluation Signals
+
+- Deterministic outputs for benchmark-style checks
+- CI-enforced regression gate support
+- Release and changelog discipline
+
+## Project status
+
+See [PROJECT_STATUS.md](./PROJECT_STATUS.md).
+
+## Roadmap
+
+See [ROADMAP.md](./ROADMAP.md).
+
+## Contributing
+
+See [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md).
+
+## License
+
+MIT
