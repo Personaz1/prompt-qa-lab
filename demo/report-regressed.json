@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-02-08T18:45:42.111515Z",
+  "total": 1,
+  "passed": 0,
+  "failed": 1,
+  "results": [
+    {
+      "id": "format-check-1",
+      "passed": false,
+      "reasons": [
+        "missing token: owner"
+      ],
+      "output": "Checklist: scope only"
+    }
+  ]
+}

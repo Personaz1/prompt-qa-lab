@@ -50,3 +50,10 @@ pqalab run --input examples/cases.json --out report.json
 ```bash
 python3 -m pytest -q
 ```
+
+
+## End-to-end demo
+```bash
+bash demo/run_demo.sh
+```
+See generated artifacts in `demo/`.
