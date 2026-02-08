@@ -31,3 +31,10 @@ Scaffold released. Contributions welcome.
 ```bash
 python3 src/pqalab.py run --input examples/cases.json --out report.json
 ```
+
+
+## Diff mode (regression gate)
+```bash
+python3 src/pqalab.py diff --old report-old.json --new report-new.json --fail-on-regression
+```
+Use exit code in CI to fail builds on quality regressions.

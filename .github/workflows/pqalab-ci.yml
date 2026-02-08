@@ -1,0 +1,19 @@
+name: pqalab-ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run scaffold checks
+        run: |
+          python src/pqalab.py run --input examples/cases.json --out report-new.json
+          cp report-new.json report-old.json
+          python src/pqalab.py diff --old report-old.json --new report-new.json --fail-on-regression
